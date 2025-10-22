@@ -1,18 +1,4 @@
-/* 
-CSS RESET AND BASIC STYLES REQUIREMENTS:
-- Universal reset for consistent cross-browser styling
-- Smooth scrolling behavior
-- Base typography and color scheme
-- Container class for consistent max-width and centering
-
-TOPICS TO UNDERSTAND:
-- CSS reset techniques
-- Box-sizing border-box
-- CSS custom properties (variables)
-- Typography fundamentals
-- Color theory and contrast
-- Container patterns for responsive design
-*/
+/* CSS reset, base typography, container. Topics: box-sizing, font stack, spacing. */
 /* Reset and Basic Styles */
 * {
   margin: 0;
@@ -37,22 +23,7 @@ body {
   padding: 0 24px;
 }
 
-/* 
-NAVIGATION STYLES REQUIREMENTS:
-- Sticky positioning for persistent navigation
-- Backdrop filter for modern glass effect
-- Flexbox layout for navigation items
-- Gradient text effects for branding
-- Hover states and transitions
-
-TOPICS TO UNDERSTAND:
-- CSS positioning (sticky)
-- Backdrop filters and modern CSS effects
-- Flexbox for horizontal layouts
-- CSS gradients and text effects
-- Hover states and transitions
-- Z-index and stacking context
-*/
+/* Nav: sticky bar, flex layout, gradient brand text, link hovers. Topics: position:sticky, backdrop-filter, flex. */
 /* Navigation */
 nav {
   padding: 24px 0;
@@ -97,22 +68,7 @@ nav {
   color: #6415ff;
 }
 
-/* 
-BUTTON STYLES REQUIREMENTS:
-- Consistent button design system
-- Multiple button variants (primary, secondary, white)
-- Hover effects and transitions
-- Accessibility considerations
-- Reusable component patterns
-
-TOPICS TO UNDERSTAND:
-- CSS design systems and component patterns
-- Multiple class selectors
-- CSS transitions and transforms
-- Button accessibility
-- Color contrast ratios
-- Reusable CSS patterns
-*/
+/* Buttons: variants (primary/secondary/white). Topics: component classes, transitions, accessibility. */
 /* Button Styles */
 .btn-primary, .btn-secondary, .btn-white {
   padding: 12px 28px;
@@ -158,22 +114,7 @@ TOPICS TO UNDERSTAND:
   transform: translateY(-3px);
 }
 
-/* 
-HERO SECTION REQUIREMENTS:
-- Full viewport height layout
-- Flexbox for content alignment
-- Gradient backgrounds
-- Typography hierarchy
-- Responsive image/graphic handling
-
-TOPICS TO UNDERSTAND:
-- Viewport units (vh)
-- Flexbox for vertical centering
-- CSS gradients
-- Typography scaling
-- Responsive image techniques
-- CSS transforms for effects
-*/
+/* Hero: split layout, highlighted text, image card. Topics: flex, typography scale, gradients. */
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -253,23 +194,7 @@ TOPICS TO UNDERSTAND:
   gap: 16px;
 }
 
-
-/* 
-STATS SECTION REQUIREMENTS:
-- CSS Grid for statistics layout
-- High contrast color scheme
-- Hover effects for interactivity
-- Typography emphasis for numbers
-- Responsive grid behavior
-
-TOPICS TO UNDERSTAND:
-- CSS Grid layout
-- Color contrast and accessibility
-- CSS transforms for hover effects
-- Typography hierarchy
-- Responsive grid patterns
-- Data visualization principles
-*/
+/* Stats: 4-column grid of metrics. Topics: Grid, hover transform, contrast. */
 /* Stats Section */
 .stats {
   background: #6415ff;
@@ -303,22 +228,7 @@ TOPICS TO UNDERSTAND:
   opacity: 0.9;
 }
 
-/* 
-FEATURES SECTION REQUIREMENTS:
-- CSS Grid for feature card layout
-- Card design with hover effects
-- Icon integration
-- Consistent spacing and typography
-- Responsive grid behavior
-
-TOPICS TO UNDERSTAND:
-- CSS Grid for card layouts
-- Card design patterns
-- CSS transforms and hover states
-- Icon usage and styling
-- Responsive design patterns
-- Content organization principles
-*/
+/* Features: 3-column card grid with icon, h3, p. Topics: grid, hover lift, spacing. */
 /* Features Section */
 .features {
   padding: 120px 0;
@@ -380,22 +290,7 @@ TOPICS TO UNDERSTAND:
   line-height: 1.6;
 }
 
-/* 
-PRICING SECTION REQUIREMENTS:
-- CSS Grid for pricing card layout
-- Featured card styling with special treatment
-- List styling with custom checkmarks
-- Button styling within cards
-- Responsive grid behavior
-
-TOPICS TO UNDERSTAND:
-- CSS Grid for pricing layouts
-- Featured state styling
-- CSS pseudo-elements for custom bullets
-- Card design with featured states
-- Button styling within components
-- Pricing presentation patterns
-*/
+/* Pricing: 2-card grid, featured style, list bullets. Topics: grid, ::before, button states. */
 /* Pricing Section */
 .pricing {
   padding: 120px 0;
@@ -515,22 +410,7 @@ TOPICS TO UNDERSTAND:
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* 
-CALL-TO-ACTION (CTA) SECTION REQUIREMENTS:
-- Centered layout with gradient background
-- High contrast text and button styling
-- Typography hierarchy for emphasis
-- Button prominence and hover effects
-- Full-width section styling
-
-TOPICS TO UNDERSTAND:
-- Centered layout techniques
-- Gradient backgrounds
-- High contrast design
-- Call-to-action design principles
-- Button prominence techniques
-- Conversion optimization patterns
-*/
+/* CTA: centered copy + button. Topics: contrast, spacing, clear CTA. */
 /* CTA Section */
 .cta {
   padding: 120px 0;
@@ -552,23 +432,7 @@ TOPICS TO UNDERSTAND:
   margin: 0 auto 40px;
 }
 
-
-/* 
-FOOTER SECTION REQUIREMENTS:
-- Multi-column CSS Grid layout
-- Dark theme color scheme
-- Link organization and styling
-- Brand presentation
-- Copyright information styling
-
-TOPICS TO UNDERSTAND:
-- CSS Grid for multi-column layouts
-- Dark theme design
-- Link styling and hover effects
-- Footer design patterns
-- Brand presentation techniques
-- Site-wide navigation styling
-*/
+/* Footer: 4-column grid, link list, dark theme. Topics: grid columns, hover color. */
 /* Footer */
 footer {
   background: #1a202c;
@@ -629,22 +493,7 @@ footer {
   color: #a0aec0;
 }
 
-/* 
-RESPONSIVE DESIGN REQUIREMENTS:
-- Mobile-first responsive breakpoints
-- CSS Grid responsive behavior
-- Navigation mobile menu activation
-- Typography scaling for mobile
-- Layout adjustments for different screen sizes
-
-TOPICS TO UNDERSTAND:
-- Media queries and breakpoints
-- Mobile-first design approach
-- Responsive CSS Grid
-- Mobile navigation patterns
-- Typography scaling
-- Responsive design principles
-*/
+/* Responsive: grid changes, stack hero, scale type. Topics: media queries, mobile-first tweaks. */
 /* Responsive */
 @media (max-width: 968px) {
   .nav-links {
