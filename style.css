@@ -187,13 +187,12 @@ TOPICS TO UNDERSTAND:
 
 /* Animated Robot Emoji */
 .animated-robot {
-  position: absolute;
-  top: 20%;
-  right: 10%;
+  display: inline-block;
   font-size: 48px;
   animation: robotFloat 3s ease-in-out infinite;
-  z-index: 1;
+  margin-left: 15px;
   opacity: 0.8;
+  vertical-align: middle;
 }
 
 @keyframes robotFloat {
@@ -688,6 +687,11 @@ TOPICS TO UNDERSTAND:
 
   .hero-image img {
     border-radius: 15px;
+  }
+
+  .animated-robot {
+    font-size: 36px;
+    margin-left: 10px;
   }
 
   .hero-buttons {
