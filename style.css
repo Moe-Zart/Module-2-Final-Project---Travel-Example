@@ -275,6 +275,20 @@ TOPICS TO UNDERSTAND:
   padding-top: 120px;
   padding-bottom: 80px;
   background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+  position: relative;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('assets/images/hero-travel.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
 }
 
 .hero-content {
@@ -282,6 +296,8 @@ TOPICS TO UNDERSTAND:
   gap: 60px;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text {
@@ -298,6 +314,13 @@ TOPICS TO UNDERSTAND:
 .hero-image {
   width: 50%;
   max-width: 500px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .hero-text .highlight {
@@ -761,6 +784,10 @@ TOPICS TO UNDERSTAND:
   .hero-image {
     width: 80%;
     max-width: 300px;
+  }
+
+  .hero-image img {
+    border-radius: 15px;
   }
 
   .hero-buttons {
