@@ -121,10 +121,10 @@ nav {
 /* Hero: background image overlay, split layout, highlight text. Topics: layering, flex. */
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
-  padding-top: 120px;
+  padding-top: 0;
   padding-bottom: 80px;
   background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
   position: relative;
