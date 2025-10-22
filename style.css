@@ -1,3 +1,18 @@
+/* 
+CSS RESET AND BASIC STYLES REQUIREMENTS:
+- Universal reset for consistent cross-browser styling
+- Smooth scrolling behavior
+- Base typography and color scheme
+- Container class for consistent max-width and centering
+
+TOPICS TO UNDERSTAND:
+- CSS reset techniques
+- Box-sizing border-box
+- CSS custom properties (variables)
+- Typography fundamentals
+- Color theory and contrast
+- Container patterns for responsive design
+*/
 /* Reset and Basic Styles */
 * {
   margin: 0;
@@ -22,6 +37,22 @@ body {
   padding: 0 24px;
 }
 
+/* 
+NAVIGATION STYLES REQUIREMENTS:
+- Sticky positioning for persistent navigation
+- Backdrop filter for modern glass effect
+- Flexbox layout for navigation items
+- Gradient text effects for branding
+- Hover states and transitions
+
+TOPICS TO UNDERSTAND:
+- CSS positioning (sticky)
+- Backdrop filters and modern CSS effects
+- Flexbox for horizontal layouts
+- CSS gradients and text effects
+- Hover states and transitions
+- Z-index and stacking context
+*/
 /* Navigation */
 nav {
   padding: 24px 0;
@@ -66,20 +97,86 @@ nav {
   color: #6415ff;
 }
 
-.btn-primary {
-  background: #6415ff;
-  color: white !important;
+/* 
+BUTTON STYLES REQUIREMENTS:
+- Consistent button design system
+- Multiple button variants (primary, secondary, white)
+- Hover effects and transitions
+- Accessibility considerations
+- Reusable component patterns
+
+TOPICS TO UNDERSTAND:
+- CSS design systems and component patterns
+- Multiple class selectors
+- CSS transitions and transforms
+- Button accessibility
+- Color contrast ratios
+- Reusable CSS patterns
+*/
+/* Button Styles */
+.btn-primary, .btn-secondary, .btn-white {
   padding: 12px 28px;
   border-radius: 50px;
-  border: none;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+
+.btn-primary {
+  background: #6415ff;
+  color: white;
 }
 
 .btn-primary:hover {
   background: #5011cc;
   transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #6415ff;
+  border: 2px solid #6415ff;
+}
+
+.btn-secondary:hover {
+  background: #6415ff;
+  color: white;
+}
+
+.btn-white {
+  background: white;
+  color: #6415ff;
+  font-size: 18px;
+  padding: 16px 40px;
+}
+
+.btn-white:hover {
+  background: #f0f0f0;
+  transform: translateY(-3px);
+}
+
+/* 
+MOBILE MENU REQUIREMENTS:
+- CSS-only mobile menu using checkbox hack
+- Fixed positioning for overlay effect
+- Smooth slide-in animations
+- Responsive breakpoint management
+- Accessibility considerations
+
+TOPICS TO UNDERSTAND:
+- CSS-only interactions (checkbox hack)
+- Fixed positioning and z-index
+- CSS transitions and animations
+- Media queries for responsive design
+- Accessibility in mobile menus
+- CSS pseudo-selectors (:checked)
+*/
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
 }
 
 .mobile-menu-btn {
@@ -92,24 +189,6 @@ nav {
 }
 
 /* Mobile Menu */
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 999;
-}
-
-.mobile-menu-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -121,49 +200,17 @@ nav {
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
   padding: 20px;
-}
-
-.mobile-menu.active {
-  right: 0;
-}
-
-.mobile-menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.mobile-menu-logo {
-  font-size: 24px;
-  font-weight: 900;
-  background: linear-gradient(135deg, #6415ff 0%, #a855f7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.mobile-menu-close {
-  background: none;
-  border: none;
-  font-size: 32px;
-  cursor: pointer;
-  color: #4a5568;
-  line-height: 1;
 }
 
 .mobile-menu-content {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-top: 60px;
 }
 
-.mobile-menu-link {
+.mobile-menu-content a {
   text-decoration: none;
   color: #4a5568;
   font-weight: 600;
@@ -173,11 +220,11 @@ nav {
   border-bottom: 1px solid #e2e8f0;
 }
 
-.mobile-menu-link:hover {
+.mobile-menu-content a:hover {
   color: #6415ff;
 }
 
-.mobile-menu-btn-primary {
+.mobile-menu-content .btn-primary {
   background: #6415ff;
   color: white;
   padding: 16px 28px;
@@ -188,12 +235,38 @@ nav {
   transition: background 0.3s ease;
   margin-top: 20px;
   font-size: 16px;
+  text-align: center;
 }
 
-.mobile-menu-btn-primary:hover {
+.mobile-menu-content .btn-primary:hover {
   background: #5011cc;
 }
 
+/* CSS-only mobile menu toggle */
+.mobile-menu-toggle:checked ~ .mobile-menu {
+  right: 0;
+}
+
+.mobile-menu-toggle:checked ~ .mobile-menu-btn::before {
+  content: "✕";
+}
+
+/* 
+HERO SECTION REQUIREMENTS:
+- Full viewport height layout
+- Flexbox for content alignment
+- Gradient backgrounds
+- Typography hierarchy
+- Responsive image/graphic handling
+
+TOPICS TO UNDERSTAND:
+- Viewport units (vh)
+- Flexbox for vertical centering
+- CSS gradients
+- Typography scaling
+- Responsive image techniques
+- CSS transforms for effects
+*/
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -246,22 +319,23 @@ nav {
   gap: 16px;
 }
 
-.btn-secondary {
-  background: transparent;
-  color: #6415ff;
-  padding: 12px 28px;
-  border-radius: 50px;
-  border: 2px solid #6415ff;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-}
 
-.btn-secondary:hover {
-  background: #6415ff;
-  color: white;
-}
+/* 
+STATS SECTION REQUIREMENTS:
+- CSS Grid for statistics layout
+- High contrast color scheme
+- Hover effects for interactivity
+- Typography emphasis for numbers
+- Responsive grid behavior
 
+TOPICS TO UNDERSTAND:
+- CSS Grid layout
+- Color contrast and accessibility
+- CSS transforms for hover effects
+- Typography hierarchy
+- Responsive grid patterns
+- Data visualization principles
+*/
 /* Stats Section */
 .stats {
   background: #6415ff;
@@ -295,6 +369,22 @@ nav {
   opacity: 0.9;
 }
 
+/* 
+FEATURES SECTION REQUIREMENTS:
+- CSS Grid for feature card layout
+- Card design with hover effects
+- Icon integration
+- Consistent spacing and typography
+- Responsive grid behavior
+
+TOPICS TO UNDERSTAND:
+- CSS Grid for card layouts
+- Card design patterns
+- CSS transforms and hover states
+- Icon usage and styling
+- Responsive design patterns
+- Content organization principles
+*/
 /* Features Section */
 .features {
   padding: 120px 0;
@@ -356,143 +446,22 @@ nav {
   line-height: 1.6;
 }
 
-/* Curriculum Section */
-.curriculum {
-  padding: 120px 0;
-  background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
-}
+/* 
+PRICING SECTION REQUIREMENTS:
+- CSS Grid for pricing card layout
+- Featured card styling with special treatment
+- List styling with custom checkmarks
+- Button styling within cards
+- Responsive grid behavior
 
-.curriculum-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.curriculum-image {
-  background: #6415ff;
-  color: white;
-  padding: 60px;
-  border-radius: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.curriculum-image:hover {
-  transform: scale(1.03);
-}
-
-.curriculum-text h2 {
-  font-size: 48px;
-  font-weight: 900;
-  margin-bottom: 24px;
-}
-
-.curriculum-text p {
-  font-size: 18px;
-  color: #4a5568;
-  margin-bottom: 32px;
-  line-height: 1.6;
-}
-
-.curriculum-list {
-  list-style: none;
-}
-
-.curriculum-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-
-.curriculum-item::before {
-  content: "✓";
-  display: inline-flex;
-  width: 28px;
-  height: 28px;
-  background: #6415ff;
-  color: white;
-  border-radius: 50%;
-  margin-right: 16px;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  flex-shrink: 0;
-}
-
-/* Testimonials Section */
-.testimonials {
-  padding: 120px 0;
-  background: white;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 60px;
-}
-
-.testimonial-card {
-  background: #f8f9ff;
-  padding: 40px;
-  border-radius: 16px;
-  transition: transform 0.3s ease, background 0.3s ease;
-  position: relative;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  background: #f0f2ff;
-}
-
-.testimonial-quote {
-  font-size: 60px;
-  color: #6415ff;
-  opacity: 0.2;
-  position: absolute;
-  top: 20px;
-  left: 30px;
-}
-
-.testimonial-text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #4a5568;
-  margin-bottom: 24px;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.author-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #6415ff;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 20px;
-  flex-shrink: 0;
-}
-
-.author-info h4 {
-  font-size: 16px;
-  margin-bottom: 4px;
-}
-
-.author-info p {
-  font-size: 14px;
-  color: #718096;
-}
-
+TOPICS TO UNDERSTAND:
+- CSS Grid for pricing layouts
+- Featured state styling
+- CSS pseudo-elements for custom bullets
+- Card design with featured states
+- Button styling within components
+- Pricing presentation patterns
+*/
 /* Pricing Section */
 .pricing {
   padding: 120px 0;
@@ -612,6 +581,22 @@ nav {
   background: rgba(255, 255, 255, 0.3);
 }
 
+/* 
+CALL-TO-ACTION (CTA) SECTION REQUIREMENTS:
+- Centered layout with gradient background
+- High contrast text and button styling
+- Typography hierarchy for emphasis
+- Button prominence and hover effects
+- Full-width section styling
+
+TOPICS TO UNDERSTAND:
+- Centered layout techniques
+- Gradient backgrounds
+- High contrast design
+- Call-to-action design principles
+- Button prominence techniques
+- Conversion optimization patterns
+*/
 /* CTA Section */
 .cta {
   padding: 120px 0;
@@ -633,23 +618,23 @@ nav {
   margin: 0 auto 40px;
 }
 
-.btn-white {
-  background: white;
-  color: #6415ff;
-  padding: 16px 40px;
-  border-radius: 50px;
-  border: none;
-  font-weight: 700;
-  font-size: 18px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
 
-.btn-white:hover {
-  background: #f0f0f0;
-  transform: translateY(-3px);
-}
+/* 
+FOOTER SECTION REQUIREMENTS:
+- Multi-column CSS Grid layout
+- Dark theme color scheme
+- Link organization and styling
+- Brand presentation
+- Copyright information styling
 
+TOPICS TO UNDERSTAND:
+- CSS Grid for multi-column layouts
+- Dark theme design
+- Link styling and hover effects
+- Footer design patterns
+- Brand presentation techniques
+- Site-wide navigation styling
+*/
 /* Footer */
 footer {
   background: #1a202c;
@@ -710,6 +695,22 @@ footer {
   color: #a0aec0;
 }
 
+/* 
+RESPONSIVE DESIGN REQUIREMENTS:
+- Mobile-first responsive breakpoints
+- CSS Grid responsive behavior
+- Navigation mobile menu activation
+- Typography scaling for mobile
+- Layout adjustments for different screen sizes
+
+TOPICS TO UNDERSTAND:
+- Media queries and breakpoints
+- Mobile-first design approach
+- Responsive CSS Grid
+- Mobile navigation patterns
+- Typography scaling
+- Responsive design principles
+*/
 /* Responsive */
 @media (max-width: 968px) {
   .nav-links {
@@ -718,6 +719,14 @@ footer {
 
   .mobile-menu-btn {
     display: block;
+  }
+
+  .mobile-menu-toggle:checked ~ .mobile-menu {
+    right: 0;
+  }
+
+  .mobile-menu-toggle:checked ~ .mobile-menu-btn::before {
+    content: "✕";
   }
 
   .stats-grid {

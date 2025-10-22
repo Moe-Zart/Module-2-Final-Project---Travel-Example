@@ -1,64 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- 
+    HTML HEAD SECTION REQUIREMENTS:
+    - Basic HTML5 document structure
+    - Meta tags for character encoding and viewport
+    - Title tag for SEO and browser tab
+    - CSS file linking
+    
+    TOPICS TO UNDERSTAND:
+    - HTML5 semantic structure
+    - Meta tags and their purposes
+    - Document head elements
+    - External stylesheet linking
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FES Institute - Master Frontend Development</title>
-    <script src="index.js" defer></script>
+    <title>AI Assistant Pro - Your Personal AI Companion</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- 
+    NAVIGATION SECTION REQUIREMENTS:
+    - Semantic nav element for accessibility
+    - Logo/brand name
+    - Navigation links with anchor tags
+    - Mobile-responsive hamburger menu
+    - CSS-only mobile menu toggle (checkbox hack)
+    
+    TOPICS TO UNDERSTAND:
+    - Semantic HTML5 elements (nav)
+    - Anchor tags and internal linking (#anchors)
+    - Form elements (checkbox input)
+    - Label elements for accessibility
+    - CSS-only interactions (no JavaScript needed)
+    - Responsive design principles
+    -->
     <nav>
       <div class="container">
         <div class="nav-content">
-          <div class="logo">FES Institute</div>
+          <div class="logo">AI Assistant Pro</div>
           <div class="nav-links">
             <a href="#features">Features</a>
-            <a href="#curriculum">Curriculum</a>
             <a href="#pricing">Pricing</a>
-            <a class="btn-primary" href="#start">Start Learning</a>
+            <a class="btn-primary" href="#start">Get Started</a>
           </div>
-          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+          <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+          <label for="mobile-menu-toggle" class="mobile-menu-btn">☰</label>
+          <div class="mobile-menu">
+            <div class="mobile-menu-content">
+              <a href="#features">Features</a>
+              <a href="#pricing">Pricing</a>
+              <a href="#start" class="btn-primary">Get Started</a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-      <div class="mobile-menu-header">
-        <div class="mobile-menu-logo">FES Institute</div>
-        <button class="mobile-menu-close" id="mobile-menu-close">
-          &times;
-        </button>
-      </div>
-      <div class="mobile-menu-content">
-        <a href="#features" class="mobile-menu-link">Features</a>
-        <a href="#curriculum" class="mobile-menu-link">Curriculum</a>
-        <a href="#pricing" class="mobile-menu-link">Pricing</a>
-        <a href="#start" class="mobile-menu-btn-primary">Start Learning</a>
-      </div>
-    </div>
-
-    <!-- Hero Section -->
+    <!-- 
+    HERO SECTION REQUIREMENTS:
+    - Eye-catching headline with span for styling
+    - Compelling description paragraph
+    - Call-to-action buttons
+    - SVG graphic/illustration
+    - Responsive layout structure
+    
+    TOPICS TO UNDERSTAND:
+    - Semantic HTML5 elements (section)
+    - Heading hierarchy (h1)
+    - Span elements for inline styling
+    - Button elements and accessibility
+    - SVG graphics and inline SVG
+    - CSS Grid/Flexbox for layout
+    - Responsive design patterns
+    -->
     <section class="hero">
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
             <h1>
-              Master <span class="highlight">Frontend Development</span> in
-              Weeks
+              Your Personal <span class="highlight">AI Assistant</span> is Here
             </h1>
             <p>
-              Join FES Institute and transform into a professional frontend
-              developer with our intensive, project-based learning program.
+              Experience the future of productivity with an AI companion that understands you, 
+              helps you work smarter, and makes your life easier every single day.
             </p>
             <div class="hero-buttons">
-              <button class="btn-primary">Get Started</button>
-              <button class="btn-secondary">View Curriculum</button>
+              <button class="btn-primary">Start Free Trial</button>
+              <button class="btn-secondary">Watch Demo</button>
             </div>
           </div>
           <svg
@@ -112,270 +142,243 @@
       </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- 
+    STATS SECTION REQUIREMENTS:
+    - Grid layout for statistics display
+    - Large numbers for visual impact
+    - Descriptive labels
+    - Consistent spacing and alignment
+    
+    TOPICS TO UNDERSTAND:
+    - CSS Grid layout
+    - Typography hierarchy
+    - Visual hierarchy principles
+    - Data presentation patterns
+    - Color contrast and accessibility
+    -->
     <section class="stats">
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item">
-            <div class="stat-number">5,000+</div>
-            <div class="stat-label">Graduates</div>
+            <div class="stat-number">2M+</div>
+            <div class="stat-label">Happy Users</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">95%</div>
-            <div class="stat-label">Job Placement</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">12 Weeks</div>
-            <div class="stat-label">To Job Ready</div>
+            <div class="stat-number">99.9%</div>
+            <div class="stat-label">Uptime</div>
           </div>
           <div class="stat-item">
             <div class="stat-number">24/7</div>
-            <div class="stat-label">Support Available</div>
+            <div class="stat-label">Always Available</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Languages</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- 
+    FEATURES SECTION REQUIREMENTS:
+    - Section header with tag and title
+    - Grid layout for feature cards
+    - Icon, heading, and description for each feature
+    - Hover effects and visual feedback
+    
+    TOPICS TO UNDERSTAND:
+    - CSS Grid for card layouts
+    - Semantic HTML structure
+    - Icon usage (emoji/text icons)
+    - Card design patterns
+    - Hover states and transitions
+    - Content organization principles
+    -->
     <section class="features" id="features">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">Why Choose FES</div>
+          <div class="section-tag">Why Choose AI Assistant Pro</div>
           <h2 class="section-title">
             Everything You Need to <span class="highlight">Succeed</span>
           </h2>
         </div>
         <div class="features-grid">
           <div class="feature-card">
-            <div class="feature-icon">💻</div>
-            <h3>Project-Based</h3>
+            <div class="feature-icon">🧠</div>
+            <h3>Smart & Intuitive</h3>
             <p>
-              Learn by building real-world projects that you can add to your
-              portfolio immediately.
+              Advanced AI that learns your preferences and adapts to your unique 
+              working style for personalized assistance.
             </p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">⚡</div>
-            <h3>Fast-Track Learning</h3>
+            <h3>Lightning Fast</h3>
             <p>
-              Our intensive curriculum gets you job-ready in weeks, not years.
+              Get instant responses and complete tasks in seconds, not minutes. 
+              Boost your productivity by 10x.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Privacy First</h3>
+            <p>
+              Your data is encrypted and secure. We never share your information 
+              with third parties.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h3>Multilingual</h3>
+            <p>
+              Communicate in over 50 languages with perfect understanding 
+              and natural responses.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Cross-Platform</h3>
+            <p>
+              Access your AI assistant anywhere - desktop, mobile, tablet, 
+              or smart devices.
             </p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">🎯</div>
-            <h3>Industry Expert</h3>
+            <h3>Task Master</h3>
             <p>
-              Learn from experienced developers working at top tech companies.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🤝</div>
-            <h3>Community Support</h3>
-            <p>
-              Join a vibrant community of learners and get help whenever you
-              need it.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🚀</div>
-            <h3>Career Ready</h3>
-            <p>
-              Build a professional portfolio and gain skills that employers
-              actively seek.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🎓</div>
-            <h3>Lifetime Access</h3>
-            <p>
-              Get unlimited access to all course materials and future updates
-              forever.
+              From scheduling meetings to writing emails, your AI handles 
+              everything so you can focus on what matters.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Curriculum Section -->
-    <section class="curriculum" id="curriculum">
-      <div class="container">
-        <div class="curriculum-content">
-          <div class="curriculum-visual">
-            <div class="curriculum-image">
-              <h3 style="font-size: 32px; margin-bottom: 20px">
-                Complete Learning Path
-              </h3>
-              <p style="font-size: 18px; opacity: 0.9">
-                From beginner to professional in 12 weeks
-              </p>
-            </div>
-          </div>
-          <div class="curriculum-text">
-            <div class="section-tag">Curriculum</div>
-            <h2>Comprehensive <span class="highlight">Learning Path</span></h2>
-            <p>
-              Our curriculum is designed to take you from zero to hero, covering
-              everything you need to become a professional frontend developer.
-            </p>
-            <ul class="curriculum-list">
-              <li class="curriculum-item">HTML5 & Semantic Web Structure</li>
-              <li class="curriculum-item">CSS3, Flexbox & Grid Layouts</li>
-              <li class="curriculum-item">
-                JavaScript ES6+ & Modern Practices
-              </li>
-              <li class="curriculum-item">React & Component Architecture</li>
-              <li class="curriculum-item">
-                API Integration & Async Programming
-              </li>
-              <li class="curriculum-item">
-                Git, GitHub & Professional Workflow
-              </li>
-            </ul>
-            <button class="btn-primary" style="margin-top: 24px">
-              Download Full Syllabus
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">Success Stories</div>
-          <h2 class="section-title">
-            What Our <span class="highlight">Students Say</span>
-          </h2>
-        </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-quote">"</div>
-            <p class="testimonial-text">
-              FES Institute completely changed my career. I went from knowing
-              nothing about coding to landing my dream job as a Frontend
-              Developer in just 4 months!
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">SM</div>
-              <div class="author-info">
-                <h4>Sarah Martinez</h4>
-                <p>Frontend Dev at Google</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-quote">"</div>
-            <p class="testimonial-text">
-              The project-based approach made learning so practical. I built 6
-              real-world projects that impressed employers during interviews.
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">JC</div>
-              <div class="author-info">
-                <h4>James Chen</h4>
-                <p>UI Engineer at Meta</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-quote">"</div>
-            <p class="testimonial-text">
-              Best investment I've ever made. The instructors are amazing and
-              the community support is incredible. Highly recommended!
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">EP</div>
-              <div class="author-info">
-                <h4>Emily Parker</h4>
-                <p>Developer at Amazon</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Section -->
+    <!-- 
+    PRICING SECTION REQUIREMENTS:
+    - Grid layout for pricing cards
+    - Featured card highlighting
+    - Feature lists with checkmarks
+    - Clear pricing information
+    - Call-to-action buttons
+    
+    TOPICS TO UNDERSTAND:
+    - CSS Grid for pricing layouts
+    - Card design with featured states
+    - List styling with pseudo-elements
+    - Pricing presentation patterns
+    - Call-to-action button placement
+    - Visual hierarchy in pricing
+    -->
     <section class="pricing" id="pricing">
       <div class="container">
         <div class="section-header">
           <div class="section-tag">Pricing</div>
           <h2 class="section-title">
-            Choose Your <span class="highlight">Path</span>
+            Choose Your <span class="highlight">Plan</span>
           </h2>
         </div>
         <div class="pricing-cards">
           <div class="pricing-card">
-            <div class="pricing-name">Self-Paced</div>
-            <div class="pricing-price">$599</div>
-            <div class="pricing-period">One-time payment</div>
+            <div class="pricing-name">Free</div>
+            <div class="pricing-price">$0</div>
+            <div class="pricing-period">Forever free</div>
             <ul class="pricing-features">
-              <li>Full curriculum access</li>
-              <li>Video tutorials & resources</li>
-              <li>Community forum access</li>
-              <li>6 portfolio projects</li>
-              <li>Certificate of completion</li>
-              <li>Lifetime updates</li>
+              <li>Basic AI assistance</li>
+              <li>10 requests per day</li>
+              <li>Email support</li>
+              <li>Mobile app access</li>
+              <li>Basic task automation</li>
+              <li>Community forum</li>
             </ul>
-            <button class="pricing-button">Start Learning</button>
+            <button class="pricing-button">Get Started Free</button>
           </div>
           <div class="pricing-card featured">
             <div class="pricing-badge">Most Popular</div>
-            <div class="pricing-name">Mentored Program</div>
-            <div class="pricing-price">$1,299</div>
-            <div class="pricing-period">One-time payment</div>
+            <div class="pricing-name">Pro</div>
+            <div class="pricing-price">$19</div>
+            <div class="pricing-period">Per month</div>
             <ul class="pricing-features">
-              <li>Everything in Self-Paced</li>
-              <li>1-on-1 mentor sessions</li>
-              <li>Code review & feedback</li>
-              <li>Career guidance</li>
-              <li>Interview preparation</li>
-              <li>Job placement assistance</li>
+              <li>Everything in Free</li>
+              <li>Unlimited requests</li>
+              <li>Priority support</li>
+              <li>Advanced AI features</li>
+              <li>Custom integrations</li>
+              <li>API access</li>
             </ul>
-            <button class="pricing-button">Get Started</button>
+            <button class="pricing-button">Start Pro Trial</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- 
+    CALL-TO-ACTION (CTA) SECTION REQUIREMENTS:
+    - Centered content layout
+    - Compelling headline and description
+    - Prominent call-to-action button
+    - High contrast background for emphasis
+    
+    TOPICS TO UNDERSTAND:
+    - Centered layout techniques
+    - Call-to-action design principles
+    - High contrast backgrounds
+    - Button prominence and placement
+    - Conversion optimization patterns
+    - Visual emphasis techniques
+    -->
     <section class="cta" id="start">
       <div class="container">
         <div class="cta-content">
-          <h2>Ready to Start Your Journey?</h2>
+          <h2>Ready to Transform Your Productivity?</h2>
           <p>
-            Join thousands of students who have transformed their careers with
-            FES Institute. Your future in tech starts today.
+            Join millions of users who have revolutionized their daily workflow 
+            with AI Assistant Pro. Your smarter future starts today.
           </p>
-          <button class="btn-white">Enroll Now</button>
+          <button class="btn-white">Start Free Trial</button>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- 
+    FOOTER SECTION REQUIREMENTS:
+    - Multi-column layout for organization
+    - Brand information and description
+    - Link groups for navigation
+    - Copyright information
+    - Dark theme styling
+    
+    TOPICS TO UNDERSTAND:
+    - CSS Grid for multi-column layouts
+    - Footer design patterns
+    - Link organization and grouping
+    - Brand presentation in footers
+    - Dark theme color schemes
+    - Site-wide navigation patterns
+    -->
     <footer>
       <div class="container">
         <div class="footer-content">
           <div class="footer-brand">
-            <h3>FES Institute</h3>
+            <h3>AI Assistant Pro</h3>
             <p>
-              Empowering the next generation of frontend developers with
-              cutting-edge education and practical skills.
+              Empowering individuals and businesses with intelligent AI assistance 
+              that adapts to your needs and accelerates your success.
             </p>
           </div>
           <div class="footer-links">
-            <h4>Learn</h4>
-            <a href="#">Courses</a>
-            <a href="#">Curriculum</a>
-            <a href="#">Projects</a>
-            <a href="#">Resources</a>
+            <h4>Product</h4>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">API</a>
+            <a href="#">Integrations</a>
           </div>
           <div class="footer-links">
             <h4>Company</h4>
             <a href="#">About Us</a>
-            <a href="#">Instructors</a>
             <a href="#">Careers</a>
+            <a href="#">Press</a>
             <a href="#">Contact</a>
           </div>
           <div class="footer-links">
@@ -387,7 +390,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 FES Institute. All rights reserved.</p>
+          <p>&copy; 2025 AI Assistant Pro. All rights reserved.</p>
         </div>
       </div>
     </footer>
